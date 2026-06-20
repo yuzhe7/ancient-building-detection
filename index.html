@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="古建筑损伤智能检测系统 — 基于YOLOv8深度学习，自动识别裂缝、风化、碱蚀、缺失、苔藓五类古建筑损伤。">
+  <title>古建筑损伤智能检测系统</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" role="navigation" aria-label="主导航">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="返回首页">
+        <span class="nav-icon">🏛️</span>
+        <span class="nav-title">古建筑损伤检测</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="展开菜单">
+        <span class="hamburger"></span>
+      </button>
+
+      <div id="nav-menu" class="nav-menu">
+        <a href="#features" class="nav-link">核心功能</a>
+        <a href="#tech" class="nav-link">技术架构</a>
+        <a href="#screenshots" class="nav-link">软件截图</a>
+        <a href="#download" class="nav-link nav-cta">下载软件</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero 段落 -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle-en">🏛️ ANCIENT BUILDING DAMAGE DETECTION</p>
+        <h1 class="hero-title">古建筑损伤智能检测系统</h1>
+        <p class="hero-desc">基于 YOLOv8 深度学习 &nbsp;·&nbsp; 五类损伤自动识别 &nbsp;·&nbsp; 一键生成专业报告</p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary">📥 下载软件</a>
+          <a href="#features" class="btn btn-secondary">了解更多</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>向下滚动</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </section>
+
+    <!-- 核心功能段落 -->
+    <section id="features" class="section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <h2 class="section-title">✨ 核心功能</h2>
+          <p class="section-subtitle">检测 → 分析 → 建议 → 报告，全流程覆盖</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">📷</div>
+            <h3>四种检测模式</h3>
+            <p>支持单图检测、批量检测、视频检测、摄像头实时检测，覆盖不同巡检场景。</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🔍</div>
+            <h3>五类损伤识别</h3>
+            <p>自动识别裂缝（CRACK）、风化侵蚀（W_E）、碱蚀（ALKALI）、缺失（MISS）、苔藓（MOSS）。</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🔥</div>
+            <h3>损伤热力图 & 评级</h3>
+            <p>热力图直观展示损伤分布，自动判定轻微/中等/严重三个等级，优先修缮一目了然。</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">💡</div>
+            <h3>智能修复建议</h3>
+            <p>5 类损伤 × 3 种严重度 = 15 条专家级修复建议，检测完成自动匹配推荐方案。</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">🔄</div>
+            <h3>修复前后对比</h3>
+            <p>同一墙面修复前后照片自动对比，标注新增/扩大/缩小/稳定/已修复五种变化。</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">📄</div>
+            <h3>一键报告导出</h3>
+            <p>自动生成专业 PDF 报告（含封面、汇总表、详情），支持 Excel 数据导出和结果图保存。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 技术架构段落 -->
+<section id="tech" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <h2 class="section-title">🧠 技术架构</h2>
+      <p class="section-subtitle">基于 Ultralytics YOLOv8 构建，PyQt5 桌面界面，支持 GPU 加速推理</p>
+    </div>
+
+    <!-- 技术栈流程 -->
+    <div class="tech-flow reveal">
+      <div class="tech-node">
+        <div class="tech-node-icon">🧩</div>
+        <strong>YOLOv8</strong>
+        <p>目标检测引擎<br>mAP@50: 0.85+</p>
+      </div>
+      <div class="tech-arrow">→</div>
+      <div class="tech-node">
+        <div class="tech-node-icon">🖥️</div>
+        <strong>PyQt5</strong>
+        <p>桌面应用界面<br>宣纸古建主题</p>
+      </div>
+      <div class="tech-arrow">→</div>
+      <div class="tech-node">
+        <div class="tech-node-icon">📊</div>
+        <strong>ReportLab</strong>
+        <p>PDF 报告引擎<br>自动排版生成</p>
+      </div>
+      <div class="tech-arrow">→</div>
+      <div class="tech-node">
+        <div class="tech-node-icon">📦</div>
+        <strong>PyInstaller</strong>
+        <p>单文件打包<br>即开即用</p>
+      </div>
+    </div>
+
+    <!-- 损伤类型指标 -->
+    <div class="tech-stats reveal">
+      <h3>五类损伤检测指标</h3>
+      <p class="section-subtitle" style="text-align:center;margin-bottom:24px">以下数据为训练集评估结果，实际运行可通过"性能指标"功能复现</p>
+      <div class="stats-table-wrapper">
+        <table class="stats-table">
+          <thead>
+            <tr><th>损伤类型</th><th>精确率 (P)</th><th>召回率 (R)</th><th>F1 分数</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>🔴 裂缝 CRACK</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>🟠 风化侵蚀 W_E</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>⚪ 碱蚀 ALKALI</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>🟣 缺失 MISS</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>🟢 苔藓 MOSS</td><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <p class="table-note">* 运行 <code>性能指标.py</code> 获取最新评估数据后填入</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 软件截图段落 -->
+<section id="screenshots" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <h2 class="section-title">🖼️ 软件截图</h2>
+      <p class="section-subtitle">宣纸古建主题界面，专业与美感兼备</p>
+    </div>
+    <div class="screenshots-grid reveal">
+      <figure class="screenshot-card">
+        <img src="img/screenshot-1.jpg" alt="损伤检测主界面" loading="lazy">
+        <figcaption>📷 检测主界面 — 自动标注五类损伤，显示类型、置信度、面积占比</figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="img/screenshot-2.jpg" alt="损伤热力图" loading="lazy">
+        <figcaption>🔥 损伤热力图 — 红色区域为损伤密集区，优先修缮一目了然</figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="img/screenshot-3.jpg" alt="PDF检测报告" loading="lazy">
+        <figcaption>📄 自动生成 PDF 报告 — 含封面、汇总表、检测详情、修复建议</figcaption>
+      </figure>
+    </div>
+    <p class="table-note" style="text-align:center;margin-top:16px">* 运行软件截取实际界面图片后替换占位图</p>
+  </div>
+</section>
+
+  <!-- 下载段落 -->
+  <section id="download" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <h2 class="section-title">📥 下载软件</h2>
+        <p class="section-subtitle">Windows 平台 · 即开即用 · 支持 GPU / CPU 推理</p>
+      </div>
+
+      <div class="download-box reveal">
+        <div class="download-info">
+          <div class="download-version">
+            <span class="version-tag">v1.0</span>
+            <span>最新版本</span>
+          </div>
+          <ul class="download-specs">
+            <li>🖥️ 系统要求：Windows 10 / 11（64 位）</li>
+            <li>💾 安装包大小：约 450 MB（含模型权重）</li>
+            <li>⚡ 支持 GPU（CUDA）加速推理，也可 CPU 运行</li>
+            <li>📦 解压即用，无需安装 Python 环境</li>
+          </ul>
+          <div class="download-actions">
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/古建筑损伤检测系统.zip"
+               class="btn btn-primary btn-large">
+              ⬇ 下载安装包（ZIP · ~450MB）
+            </a>
+            <p class="download-note">
+              下载较慢？<a href="#" class="mirror-link">123 云盘备用链接 &rarr;</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="section-inner">
+      <p>&copy; 2026 古建筑损伤智能检测系统 &nbsp;|&nbsp; 基于 <a href="https://github.com/ultralytics/ultralytics" target="_blank" rel="noopener">Ultralytics YOLOv8</a> 构建</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
