@@ -182,29 +182,57 @@
     <div class="section-inner">
       <div class="section-header reveal">
         <h2 class="section-title">📥 下载软件</h2>
-        <p class="section-subtitle">Windows 平台 · 即开即用 · 支持 GPU / CPU 推理</p>
+        <p class="section-subtitle">支持 Windows 桌面版 与 Android 移动版</p>
       </div>
 
-      <div class="download-box reveal">
-        <div class="download-info">
-          <div class="download-version">
-            <span class="version-tag">v1.0</span>
-            <span>最新版本</span>
+      <div class="download-grid reveal">
+        <!-- Windows 下载卡片 -->
+        <div class="download-box">
+          <div class="download-info">
+            <div class="download-version">
+              <span class="version-tag">v1.0</span>
+              <span>Windows 版</span>
+            </div>
+            <ul class="download-specs">
+              <li>🖥️ 系统要求：Windows 10 / 11（64 位）</li>
+              <li>💾 安装包大小：约 450 MB（含模型权重）</li>
+              <li>⚡ 支持 GPU（CUDA）加速推理，也可 CPU 运行</li>
+              <li>📦 解压即用，无需安装 Python 环境</li>
+            </ul>
+            <div class="download-actions">
+              <a href="https://github.com/yuzhe7/ancient-building-detection/releases/latest/download/古建筑损伤检测系统.zip"
+                 class="btn btn-primary btn-large">
+                ⬇ 下载 Windows 版（ZIP · ~450MB）
+              </a>
+              <p class="download-note">
+                下载较慢？<a href="#" class="mirror-link">123 云盘备用链接 &rarr;</a>
+              </p>
+            </div>
           </div>
-          <ul class="download-specs">
-            <li>🖥️ 系统要求：Windows 10 / 11（64 位）</li>
-            <li>💾 安装包大小：约 450 MB（含模型权重）</li>
-            <li>⚡ 支持 GPU（CUDA）加速推理，也可 CPU 运行</li>
-            <li>📦 解压即用，无需安装 Python 环境</li>
-          </ul>
-          <div class="download-actions">
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/latest/download/古建筑损伤检测系统.zip"
-               class="btn btn-primary btn-large">
-              ⬇ 下载安装包（ZIP · ~450MB）
-            </a>
-            <p class="download-note">
-              下载较慢？<a href="#" class="mirror-link">123 云盘备用链接 &rarr;</a>
-            </p>
+        </div>
+
+        <!-- Android 下载卡片 -->
+        <div class="download-box">
+          <div class="download-info">
+            <div class="download-version">
+              <span class="version-tag">v1.0</span>
+              <span>Android 版</span>
+            </div>
+            <ul class="download-specs">
+              <li>📱 系统要求：Android 8.0 及以上</li>
+              <li>💾 安装包大小：约 53 MB</li>
+              <li>📷 支持拍照检测、相册导入</li>
+              <li>🧠 内置 TFLite 模型，离线运行无需联网</li>
+            </ul>
+            <div class="download-actions">
+              <a href="https://github.com/yuzhe7/ancient-building-detection/releases/latest/download/古建筑损伤检测-Android-v1.0.apk"
+                 class="btn btn-primary btn-large">
+                ⬇ 下载 Android 版（APK · ~53MB）
+              </a>
+              <p class="download-note">
+                安装前请开启"允许安装未知来源应用"
+              </p>
+            </div>
           </div>
         </div>
       </div>

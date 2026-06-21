@@ -513,9 +513,14 @@ h1, h2, h3, h4 {
 }
 
 /* === 下载段落 === */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
 .download-box {
-  max-width: 600px;
-  margin: 0 auto;
   background: #fff;
   border: 2px solid var(--color-copper);
   border-radius: 12px;
@@ -715,6 +720,11 @@ h1, h2, h3, h4 {
   .tech-arrow {
     transform: rotate(90deg);
     margin: 0;
+  }
+
+  .download-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .download-box {
